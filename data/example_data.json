@@ -1,1 +1,9 @@
-[{"year":2018,"cpi_index":100,"student_income":100},{"year":2019,"cpi_index":102,"student_income":101},{"year":2020,"cpi_index":104,"student_income":101},{"year":2021,"cpi_index":108,"student_income":102},{"year":2022,"cpi_index":113,"student_income":103},{"year":2023,"cpi_index":118,"student_income":104},{"year":2024,"cpi_index":122,"student_income":104}]
+[
+  { "year": 2018, "cpi_index": 100, "student_income": 100 },
+  { "year": 2019, "cpi_index": 103, "student_income": 102 },
+  { "year": 2020, "cpi_index": 106, "student_income": 103 },
+  { "year": 2021, "cpi_index": 110, "student_income": 104 },
+  { "year": 2022, "cpi_index": 115, "student_income": 105 },
+  { "year": 2023, "cpi_index": 122, "student_income": 106 },
+  { "year": 2024, "cpi_index": 128, "student_income": 108 }
+]
