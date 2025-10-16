@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tipping Point: The Hidden Cost of Growing Up</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+  <link rel="stylesheet" href="styles/chart-narrative.css" />
+  <link rel="stylesheet" href="styles/evolution-bar.css" />
+  <link rel="stylesheet" href="styles/snake-scroll.css" />
+  <link rel="stylesheet" href="styles/shared-layout.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/page1-transition.css" />
+  <link rel="stylesheet" href="styles/page2-reality.css" />
+  <link rel="stylesheet" href="styles/page3-strain.css" />
+  <link rel="stylesheet" href="styles/page4-crisis.css" />
+  <link rel="stylesheet" href="styles/page5-grind.css" />
+  <link rel="stylesheet" href="styles/page6-light.css" />
+
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+  <!-- Sticky Navigation Bar -->
+  <nav class="sticky-nav">
+    <a href="#page1" class="sticky-nav-link" data-page="page1">Transition</a>
+    <a href="#page2" class="sticky-nav-link" data-page="page2">Reality</a>
+    <a href="#page3" class="sticky-nav-link" data-page="page3">Strain</a>
+    <a href="#page4" class="sticky-nav-link" data-page="page4">Crisis</a>
+    <a href="#page5" class="sticky-nav-link" data-page="page5">Grind</a>
+    <a href="#page6" class="sticky-nav-link" data-page="page6">Light</a>
+  </nav>
+
+  <header>
+    <div class="header-content">
+      <h1>Tipping Point: The Hidden Cost of Growing Up</h1>
+    </div>
+  </header>
+
+  <main id="main-content"></main>
+
+  <!-- 🧭 Evolution Scroll Bar -->
+  <div id="evolution-bar">
+    <div id="evolution-track">
+      <div id="evolution-fill"></div>
+      <div id="evolution-thumb">●</div>
+    </div>
+  </div>
+
+  <!-- 🐍 Snake Scroll Indicator -->
+  <div id="snake-scroll">
+    <svg width="100%" height="100%" style="position: absolute; top: 0; left: 0;">
+      <defs>
+        <linearGradient id="snakeGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#8B7355;stop-opacity:0.6" />
+          <stop offset="50%" style="stop-color:#A68A64;stop-opacity:0.5" />
+          <stop offset="100%" style="stop-color:#C9A882;stop-opacity:0.4" />
+        </linearGradient>
+      </defs>
+      <path id="snake-path" d=""></path>
+    </svg>
+    <div id="snake-thumb">●</div>
+  </div>
+
+  <!-- Load scripts -->
+  <script type="module" src="scripts/loadSections.js"></script>
+  <script type="module" src="scripts/evolution-bar.js"></script>
+  <script type="module" src="scripts/navigation.js"></script>
+  <script src="scripts/snake-scroll.js"></script>
+</body>
+</html>

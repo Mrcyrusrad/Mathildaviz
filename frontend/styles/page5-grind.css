@@ -1,0 +1,165 @@
+/* -------------------------------------- */
+/* PAGE 5 — The Grind: Survival Economy */
+/* -------------------------------------- */
+
+#page5 {
+  background: linear-gradient(135deg, #F8D4C4 0%, #FFF5EC 50%, #FFE8E0 100%);
+  color: #2b2b2b;
+  position: relative;
+  padding: 80px 120px;
+  transition: background 0.8s ease;
+  overflow: hidden;
+}
+
+#page5::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -20%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(232, 143, 112, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: rotateGlow 30s linear infinite;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#page5 .split-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- TEXT --- */
+#page5 .text-box {
+  flex: 1;
+  padding-right: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  border-right: 1.5px solid rgba(0, 0, 0, 0.06);
+}
+
+#page5 .highlight {
+  background: linear-gradient(135deg, rgba(246, 215, 196, 0.4) 0%, rgba(255, 230, 210, 0.35) 100%);
+  border-left: 4px solid #e88f70;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#page5 .highlight:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+#page5 .page-message {
+  font-style: italic;
+  opacity: 0.85;
+  margin-top: 20px;
+}
+
+/* --- CHART --- */
+#page5 .chart-box {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+#chart5 {
+  width: 100%;
+  height: 400px;
+}
+
+/* --- Floating Stat --- */
+#page5 .floating-stat {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 245, 235, 0.95) 100%);
+  color: #3a3a3a;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1),
+              0 2px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  animation: floatUp 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0.9; }
+  100% { transform: translateY(-8px); opacity: 1; }
+}
+
+/* --- Energy Bar --- */
+.energy-bar {
+  width: 80%;
+  height: 24px;
+  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1),
+              0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.energy-fill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #8BC34A 0%, #CDDC39 25%, #FFC107 50%, #FF9800 75%, #F44336 100%);
+  animation: drain 10s linear infinite;
+  box-shadow: 0 0 8px rgba(139, 195, 74, 0.4);
+}
+
+@keyframes drain {
+  0% { width: 100%; }
+  100% { width: 0%; }
+}
+
+.energy-text {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
+
+#page5 .grind-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 60% 40%, rgba(255,255,255,0) 0%, rgba(255,120,120,0.15) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  #page5 .split-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #page5 .text-box {
+    border-right: none;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 20px;
+  }
+}

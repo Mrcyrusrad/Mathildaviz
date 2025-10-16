@@ -1,0 +1,129 @@
+/* -------------------------------------- */
+/* PAGE 6 — The Light: What Helps         */
+/* -------------------------------------- */
+
+#page6 {
+  background: linear-gradient(135deg, #E6F6F1 0%, #F1F9FF 50%, #E8F4FF 100%);
+  color: #1f3b30;
+  position: relative;
+  padding: 80px 120px;
+  transition: background 0.8s ease;
+  overflow: hidden;
+}
+
+#page6::before {
+  content: '';
+  position: absolute;
+  bottom: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(124, 201, 173, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: gentleGlow 25s ease-in-out infinite;
+}
+
+@keyframes gentleGlow {
+  0%, 100% { transform: translateX(-50%) scale(1); opacity: 0.6; }
+  50% { transform: translateX(-50%) scale(1.1); opacity: 0.8; }
+}
+
+#page6 .split-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- TEXT --- */
+#page6 .text-box {
+  flex: 1;
+  padding-right: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  border-right: 1.5px solid rgba(0, 0, 0, 0.06);
+}
+
+#page6 .highlight {
+  background: linear-gradient(135deg, rgba(166, 218, 199, 0.3) 0%, rgba(200, 230, 220, 0.25) 100%);
+  border-left: 4px solid #7cc9ad;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#page6 .highlight:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+#page6 .page-message {
+  font-style: italic;
+  opacity: 0.85;
+  margin-top: 20px;
+}
+
+/* --- CHARTS --- */
+#page6 .chart-box {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+#chart6 {
+  width: 100%;
+  height: 380px;
+}
+
+#network6 {
+  width: 320px;
+  height: 300px;
+}
+
+/* --- FLOATING STAT --- */
+#page6 .floating-stat {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 255, 250, 0.95) 100%);
+  color: #2f5144;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1),
+              0 2px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  animation: floatUp 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 0.9; }
+  100% { transform: translateY(-8px); opacity: 1; }
+}
+
+/* --- Overlay --- */
+#page6 .light-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at 60% 40%, rgba(255,255,255,0) 0%, rgba(200,255,200,0.2) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 900px) {
+  #page6 .split-container { flex-direction: column; text-align: center; }
+  #page6 .text-box { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.06); padding-bottom: 20px; }
+}

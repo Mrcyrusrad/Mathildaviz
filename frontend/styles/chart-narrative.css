@@ -1,0 +1,88 @@
+/* ============================================ */
+/* CHART NARRATIVE CAPTIONS - Storytelling    */
+/* ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+.chart-narrative {
+  margin-top: 20px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(240, 240, 240, 0.4) 100%);
+  border-radius: 16px;
+  border-left: 4px solid var(--tuscan);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.chart-narrative:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border-left-color: var(--timber);
+}
+
+.chart-caption-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 12px 0;
+  letter-spacing: 0.3px;
+  font-family: 'Merriweather', serif;
+}
+
+.chart-caption-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin: 0 0 12px 0;
+  opacity: 0.9;
+  font-family: 'Merriweather', serif;
+}
+
+.chart-source {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-dark);
+  opacity: 0.65;
+  margin: 0;
+  font-family: 'Merriweather', serif;
+}
+
+/* Dynamic Layout Helpers */
+.chart-box {
+  position: relative;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .chart-narrative {
+    padding: 16px 20px;
+  }
+  
+  .chart-caption-title {
+    font-size: 1rem;
+  }
+  
+  .chart-caption-text {
+    font-size: 0.9rem;
+  }
+  
+  /* Reset floats on mobile */
+  [style*="float"] {
+    float: none !important;
+    width: 100% !important;
+    margin: 20px 0 !important;
+  }
+}

@@ -1,0 +1,10 @@
+/* Master stylesheet that imports all components */
+@import url('base.css');
+@import url('header.css');
+@import url('shared-layout.css');
+@import url('page1-transition.css');
+@import url('page2-reality.css');
+@import url('page3-strain.css');
+@import url('page4-crisis.css');
+@import url('page5-grind.css');
+@import url('page6-light.css');

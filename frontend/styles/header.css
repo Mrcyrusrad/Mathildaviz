@@ -1,0 +1,173 @@
+/* -------------------------------------- */
+/* HEADER — clean, professional, soft theme */
+/* -------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+/* Sticky Navigation Bar */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(250, 246, 240, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 20px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+}
+
+.sticky-nav-link {
+  text-decoration: none;
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.sticky-nav-link:link,
+.sticky-nav-link:visited {
+  text-decoration: none;
+}
+
+/* Individual link colors - More distinct */
+.sticky-nav-link:nth-child(1) {
+  color: #8B7355; /* Timber - Dark Brown */
+}
+.sticky-nav-link:nth-child(1):hover {
+  color: #C9A882;
+  border-bottom: 2px solid #C9A882;
+}
+
+.sticky-nav-link:nth-child(2) {
+  color: #4A5568; /* Soft Navy - Blue-Gray */
+}
+.sticky-nav-link:nth-child(2):hover {
+  color: #8B7355;
+  border-bottom: 2px solid #8B7355;
+}
+
+.sticky-nav-link:nth-child(3) {
+  color: #C9A882; /* Tuscan - Light Brown */
+}
+.sticky-nav-link:nth-child(3):hover {
+  color: #A68A64;
+  border-bottom: 2px solid #A68A64;
+}
+
+.sticky-nav-link:nth-child(4) {
+  color: #2D2D2D; /* Dark Gray - Almost Black */
+}
+.sticky-nav-link:nth-child(4):hover {
+  color: #8B7355;
+  border-bottom: 2px solid #8B7355;
+}
+
+.sticky-nav-link:nth-child(5) {
+  color: #A68A64; /* Wold - Medium Brown */
+}
+.sticky-nav-link:nth-child(5):hover {
+  color: #C9A882;
+  border-bottom: 2px solid #C9A882;
+}
+
+.sticky-nav-link:nth-child(6) {
+  color: #8B7355; /* Timber - Dark Brown */
+}
+.sticky-nav-link:nth-child(6):hover {
+  color: #4A5568;
+  border-bottom: 2px solid #4A5568;
+}
+
+header {
+  text-align: center;
+  padding: 120px 40px;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+              url('../assets/genz.jpeg') center/cover no-repeat;
+  color: #FFFFFF;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  font-family: 'Inter', 'Montserrat', sans-serif;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 10;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navigation Links */
+.header-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.nav-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Inter', 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #8B7355;
+  opacity: 0.85;
+}
+
+.nav-link:link,
+.nav-link:visited {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  opacity: 1;
+  color: #FFFFFF;
+  border-bottom-color: #C9A882;
+}
+
+/* Header Content */
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  animation: fadeDown 1s ease forwards;
+  line-height: 1.2;
+}
+
+
+@keyframes expandWidth {
+  from { width: 0; opacity: 0; }
+  to { width: 100px; opacity: 0.9; }
+}
+
+/* Fade animation */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

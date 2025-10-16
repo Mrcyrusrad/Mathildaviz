@@ -1,0 +1,147 @@
+/* -------------------------------------- */
+/* PAGE 2 — The Reality: Cost of Independence */
+/* -------------------------------------- */
+
+#page4 {
+  background: linear-gradient(135deg, #EAF3FF 0%, #FFF5F5 50%, #FFE8E0 100%);
+  color: #1A237E;
+  position: relative;
+  padding: 80px 120px;
+  transition: background 0.8s ease;
+  overflow: hidden;
+}
+
+#page4::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(255, 120, 120, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: pulseGlow 20s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+  50% { transform: translate(-50%, -50%) scale(1.15); opacity: 0.7; }
+}
+
+#page4 .split-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- LEFT COLUMN (Text) --- */
+#page4 .text-box {
+  flex: 1;
+  padding-right: 40px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  border-right: 1.5px solid rgba(0, 0, 0, 0.06);
+}
+
+#page4 .highlight {
+  background: linear-gradient(135deg, rgba(167, 200, 231, 0.25) 0%, rgba(255, 200, 200, 0.2) 100%);
+  border-left: 4px solid #A7C8E7;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin: 24px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#page4 .highlight:hover {
+  transform: translateX(4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+#page4 .page-message {
+  font-style: italic;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+}
+
+/* --- Overlay Text --- */
+#page4 .overlay-text {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 240, 240, 0.85) 100%);
+  color: #1A237E;
+  font-weight: 500;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+#page4 .floating-stat {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 240, 0.95) 100%);
+  color: #1A237E;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1),
+              0 2px 4px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  animation: floatUp 5s ease-in-out infinite alternate;
+}
+
+/* --- Stress Overlay --- */
+#page4 .stress-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0) 0%, rgba(255, 120, 120, 0.15) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 900px) {
+  #page4 .split-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #page4 .text-box {
+    border-right: none;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.06);
+    padding-bottom: 20px;
+  }
+
+  #page4 .floating-stat {
+    position: static;
+    margin-bottom: 10px;
+  }
+}

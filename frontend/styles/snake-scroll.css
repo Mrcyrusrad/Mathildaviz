@@ -1,0 +1,64 @@
+/* Snake scroll indicator - Hidden */
+#snake-scroll {
+  display: none;
+}
+
+#snake-scroll.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#snake-path {
+  fill: none;
+  stroke: url(#snakeGradient);
+  stroke-width: 2;
+  stroke-dasharray: 8, 4;
+  opacity: 0.4;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+  stroke-linecap: round;
+}
+
+#snake-thumb {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #8B7355 0%, #C9A882 100%);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  cursor: grab;
+  pointer-events: all;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+#snake-thumb:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+#snake-thumb:active {
+  cursor: grabbing;
+  transform: translate(-50%, -50%) scale(1.05);
+}
+
+/* Pulse animation for thumb */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(139, 115, 85, 0.7);
+  }
+  50% {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(139, 115, 85, 0);
+  }
+}
+
+#snake-thumb {
+  animation: pulse 2s infinite;
+}
