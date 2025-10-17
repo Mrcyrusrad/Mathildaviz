@@ -110,14 +110,17 @@
 .chart-box strong,
 .stat-caption b,
 .stat-caption strong {
-  font-size: 1.08em;
+  font-size: 1.12em; /* slightly larger for numeric emphasis */
   line-height: 1;
+  font-weight: 700; /* make bolds visibly thicker */
+  -webkit-font-smoothing: antialiased;
 }
 
 .large-caption b,
 .large-caption strong {
-  font-size: 1.36rem;
-  /* slightly larger than surrounding caption */
+  font-size: 1.44rem;
+  font-weight: 800;
+  /* slightly larger and thicker than surrounding caption */
 }
 
 .page-message {
