@@ -1,3 +1,3 @@
 # Mathildaviz Project
 
-An interactive data visualization project built with HTML, CSS, and JavaScript.
+An interactive data visualisation project built with HTML, CSS, and JavaScript.
