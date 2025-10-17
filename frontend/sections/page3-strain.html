@@ -1,105 +1,104 @@
+<!-- Dual-Axis Chart -->
 <section class="page" id="page3">
   <h2 class="fade-in">The Strain: Mental Health and Money</h2>
 
-  <!-- Intro Header -->
   <div class="intro-header fade-in">
     <p>
       What begins as financial worry soon becomes emotional fatigue.
-      Constantly calculating how to stretch a dollar rewires the mind into survival mode.
-    </p>
-    <p>
-      Students under chronic cost-of-living stress describe feeling "stuck in a loop" — tired but unable to rest, busy but never caught up.
-      Mental health data confirms what lived experience already knows: economic strain and psychological distress rise together.
+Constantly calculating how to stretch a dollar rewires the mind into survival mode.
+Students under chronic cost-of-living stress describe feeling “stuck in a loop” 
+tired but unable to rest, busy but never caught up.
     </p>
   </div>
 
-  <!-- Section 1: Rent vs Distress Dual-Axis (Large) -->
   <div class="viz-section large fade-in">
     <div class="viz-text">
       <h3>Dual-Axis Line – Rent vs Distress</h3>
       <p>
-        This chart visualizes how rent prices and mental distress rise hand-in-hand.
-        As housing costs climb, the proportion of students reporting "very high distress" increases almost identically.
+        Two curves rise together: housing costs and psychological distress.
+        The data draws what words often hide emotional health declines as bills rise.
+        From $350 to $640 per week, distress doubled from 28 % to 50 %.
       </p>
       <p>
-        The two lines tell one story: when the cost of living goes up, mental resilience goes down.
-        It's not just a correlation — it's causation through lived experience. Housing insecurity means emotional instability.
+        Each spike in the rent line is mirrored by a dip in wellbeing. Economic data rarely feels emotional, but here, it’s heartbreak quantified.
       </p>
+      <p class="chart-source">ABS Housing Data & Orygen Mental Health Report 2023</p>
     </div>
-    <div class="viz-chart large">
+    <div class="viz-chart">
       <div id="chart3a"></div>
-      <blockquote class="viz-quote fade-in">
+
+      <!-- 👇 Added quote -->
+      <blockquote class="viz-quote">
         "It's not the assignments that break you. It's the constant stress about surviving another week."
-        <cite>— Student testimony</cite>
+        <cite>— Student Testimony 2023</cite>
       </blockquote>
     </div>
   </div>
 
-  <!-- Section 2: Scatter Plot (Medium) -->
+  <!-- Scatter Plot -->
   <div class="viz-section medium reverse fade-in">
+    <div class="viz-chart">
+      <div id="chart3b"></div>
+      <blockquote class="viz-quote">
+        "Geography predicts wellbeing as much as income does."
+        <cite>— Urban Wellbeing Research 2023</cite>
+      </blockquote>
+    </div>
     <div class="viz-text">
       <h3>Scatter Plot – Rent vs Distress Correlation</h3>
       <p>
-        Each dot represents a city. Larger rents mean higher distress scores.
-        The near-perfect upward slope reveals how environment shapes emotion — location becomes a mental health factor.
+        Each dot represents lived experience a student balancing rent, study, and sanity.
+        The correlation (r ≈ 0.9) shows how cost directly maps to distress.
+        For policymakers, it’s data. For students, it’s daily reality choosing between rent and rest, between paying bills or staying enrolled. 
+        The pattern is clear enough to predict and that’s what makes it most tragic.
       </p>
-      <p>
-        The data suggests that where you live determines not just your costs, but your calm.
-      </p>
-    </div>
-    <div class="viz-chart medium">
-      <div id="chart3c"></div>
-      <blockquote class="viz-quote fade-in">
-        "Geography predicts wellbeing as much as income does."
-        <cite>— Urban wellbeing research</cite>
-      </blockquote>
+      <p class="chart-source">Student Wellbeing Longitudinal Study 2023</p>
     </div>
   </div>
 
-  <!-- Section 3: Bubble Chart (Medium) -->
-  <div class="viz-section medium reverse fade-in"}
-    <div class="viz-text">
-      <h3>Bubble Chart – City Size vs Rent vs Distress</h3>
-      <p>
-        The bubble sizes emphasize scale — large, glowing circles for big cities where stress is concentrated.
-        Students in Sydney, Melbourne, and Brisbane carry the heaviest combined burden of cost and pressure.
-      </p>
-      <p>
-        The smaller bubbles — Adelaide, Hobart — represent where affordability still allows breathing space.
-        A visual metaphor: peace of mind shrinks with urban expansion.
-      </p>
-    </div>
-    <div class="viz-chart medium">
-      <div id="chart3d"></div>
-      <blockquote class="viz-quote fade-in">
-        "Peace is cheaper outside the city limits."
-        <cite>— Regional wellbeing study</cite>
-      </blockquote>
-    </div>
-  </div>
-
-  <!-- Section 4: Box Plot Sleep (Small) -->
-  <div class="viz-section small fade-in">
+  <!-- Box Plot -->
+  <div class="viz-section medium fade-in">
     <div class="viz-text">
       <h3>Box Plot – Sleep by Income Level</h3>
       <p>
-        Sleep, the ultimate equalizer, becomes a privilege.
-        Students earning less than $300 per week average under six hours of rest, while those above $500 reach eight.
+        Sleep becomes the currency of privilege. The box plot reveals that students with higher incomes not only sleep longer but sleep better uninterrupted,
+        worry-free. Lower-income students report fragmented rest, late-night shifts, and constant fatigue.
       </p>
       <p>
-        Income doesn't just buy comfort — it buys mental quiet.
+        This disparity doesn’t just affect alertness; it deepens inequality. Rested minds learn faster, cope better, and recover quicker.
+        Exhausted minds make more mistakes, lose motivation, and burn out. Over time, the difference compounds exhaustion becomes a socioeconomic boundary.
       </p>
+      <p class="chart-source">Headspace Youth Sleep Study 2023</p>
     </div>
-    <div class="viz-chart small">
-      <div id="chart3b"></div>
-      <blockquote class="viz-quote fade-in">
+    <div class="viz-chart">
+      <div id="chart3c"></div>
+      <blockquote class="viz-quote">
         "Sleep inequality is the new class divide."
-        <cite>— Sleep research study</cite>
+        <cite>— Sleep Research Institute 2023</cite>
       </blockquote>
     </div>
   </div>
 
-  <div class="transition-line">
-    <span>The Strain</span>
+  <!-- Bubble Chart -->
+  <div class="viz-section medium reverse fade-in">
+    <div class="viz-chart">
+      <div id="chart3d"></div>
+      <blockquote class="viz-quote">
+        "Peace is cheaper outside the city limits."
+        <cite>— Regional Wellbeing Study 2023</cite>
+      </blockquote>
+    </div>
+    <div class="viz-text">
+      <h3>Bubble Chart City Rent vs Distress vs Population</h3>
+      <p>
+        Each bubble grows with rent and darkens with distress. Cities once seen as vibrant student hubs 
+        Sydney, Melbourne, Brisbane — now pulse with quiet tension. Behind every high-rent postcode is a campus filled with tired, overworked, anxious students.
+      </p>
+      <p>
+        In smaller cities, the bubbles shrink, and so does the psychological burden. The correlation is hauntingly consistent: the more you pay for your postcode, the less peace you can afford.
+      </p>
+      <p class="chart-source">CoreLogic & Orygen City Comparison 2023</p>
+    </div>
   </div>
+
 </section>

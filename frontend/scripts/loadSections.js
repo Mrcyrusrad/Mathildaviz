@@ -15,7 +15,9 @@ const main = document.getElementById("main-content");
 
 export async function loadSections() {
   for (const path of sections) {
-    const res = await fetch(path);
+    // Add cache-busting timestamp to force fresh load
+    const cacheBuster = `?v=${Date.now()}`;
+    const res = await fetch(path + cacheBuster, { cache: 'no-store' });
     if (!res.ok) {
       console.error(`❌ Failed to load section: ${path}`);
       continue;

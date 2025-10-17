@@ -50,7 +50,7 @@
 
 #page4 .highlight {
   background: linear-gradient(135deg, rgba(167, 200, 231, 0.25) 0%, rgba(255, 200, 200, 0.2) 100%);
-  border-left: 4px solid #A7C8E7;
+
   padding: 16px 20px;
   border-radius: 12px;
   margin: 24px 0;
@@ -145,3 +145,4 @@
     margin-bottom: 10px;
   }
 }
+

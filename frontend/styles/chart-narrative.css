@@ -2,14 +2,29 @@
 /* CHART NARRATIVE CAPTIONS - Storytelling    */
 /* ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+/* 💡 New reusable layout wrapper for chart + story */
+.chart-section {
+  display: grid;
+  grid-template-columns: 55% 40%;
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.chart-section.reverse {
+  grid-template-columns: 40% 55%;
+}
+
+.chart-section.reverse .chart-narrative {
+  order: 2;
+}
 
 .chart-narrative {
   margin-top: 20px;
   padding: 20px 24px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(240, 240, 240, 0.4) 100%);
   border-radius: 16px;
-  border-left: 4px solid var(--tuscan);
+  /* removed left border to avoid colored dash under quotes */
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -18,7 +33,7 @@
 .chart-narrative:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  border-left-color: var(--timber);
+  /* no border-left color change to prevent hover color shift */
 }
 
 .chart-caption-title {
@@ -27,7 +42,7 @@
   color: var(--text-dark);
   margin: 0 0 12px 0;
   letter-spacing: 0.3px;
-  font-family: 'Merriweather', serif;
+  font-family: 'Inter', 'Manrope', sans-serif;
 }
 
 .chart-caption-text {
@@ -36,7 +51,7 @@
   color: var(--text-dark);
   margin: 0 0 12px 0;
   opacity: 0.9;
-  font-family: 'Merriweather', serif;
+  font-family: 'Inter', 'Manrope', sans-serif;
 }
 
 .chart-source {
@@ -45,7 +60,7 @@
   color: var(--text-dark);
   opacity: 0.65;
   margin: 0;
-  font-family: 'Merriweather', serif;
+  font-family: 'Inter', 'Manrope', sans-serif;
 }
 
 /* Dynamic Layout Helpers */
@@ -59,6 +74,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -70,15 +86,15 @@
   .chart-narrative {
     padding: 16px 20px;
   }
-  
+
   .chart-caption-title {
     font-size: 1rem;
   }
-  
+
   .chart-caption-text {
     font-size: 0.9rem;
   }
-  
+
   /* Reset floats on mobile */
   [style*="float"] {
     float: none !important;

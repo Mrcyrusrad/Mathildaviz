@@ -1,6 +1,6 @@
 // chart-strain.js — Page 3 "The Strain: Mental Health & Money"
 export function renderStrainCharts() {
-  console.log("📊 Rendering Page 3: Strain charts");
+  console.log(" Rendering Page 3: Strain charts");
   
   drawDualAxisRentDistress();  // Dual-axis line chart
   drawScatterRentDistress();   // Scatter plot
@@ -24,8 +24,8 @@ function drawDualAxisRentDistress() {
       name: "Average Weekly Rent ($)",
       type: "scatter",
       mode: "lines+markers",
-      line: { color: "#5B7C99", width: 3.5, shape: "spline" },
-      marker: { size: 8, color: "#5B7C99", line: { width: 2, color: "#fff" } },
+      line: { color: "#FF6B6B", width: 3.5, shape: "spline" },
+      marker: { size: 8, color: "#FF6B6B", line: { width: 2, color: "#fff" } },
       yaxis: "y1"
     },
     {
@@ -34,8 +34,8 @@ function drawDualAxisRentDistress() {
       name: "High Distress (%)",
       type: "scatter",
       mode: "lines+markers",
-      line: { color: "#5B7C99", width: 3.5, dash: "dot", shape: "spline" },
-      marker: { size: 8, color: "#5B7C99", line: { width: 2, color: "#fff" } },
+      line: { color: "#8E24AA", width: 3.5, dash: "dot", shape: "spline" },
+      marker: { size: 8, color: "#8E24AA", line: { width: 2, color: "#fff" } },
       yaxis: "y2"
     }
   ], {
@@ -46,14 +46,14 @@ function drawDualAxisRentDistress() {
     },
     yaxis: {
       title: "Weekly Rent ($)",
-      titlefont: { color: "#5B7C99" },
-      tickfont: { color: "#5B7C99" },
+      titlefont: { color: "#FF6B6B" },
+      tickfont: { color: "#FF6B6B" },
       gridcolor: "rgba(0,0,0,0.05)"
     },
     yaxis2: {
       title: "High Distress (%)",
-      titlefont: { color: "#5B7C99" },
-      tickfont: { color: "#5B7C99" },
+      titlefont: { color: "#8E24AA" },
+      tickfont: { color: "#8E24AA" },
       overlaying: "y",
       side: "right",
       showgrid: false
@@ -69,7 +69,7 @@ function drawDualAxisRentDistress() {
       xanchor: "center",
       x: 0.5
     },
-    hovermode: "closest"
+    hovermode: "x unified"
   }, { displayModeBar: false });
 }
 
@@ -89,7 +89,7 @@ function drawScatterRentDistress() {
     marker: {
       size: 12,
       color: distress,
-      colorscale: [[0, "#7BA05B"], [0.5, "#7BA05B"], [1, "#5B7C99"]],
+      colorscale: [[0, "#6BCF7F"], [0.5, "#FFB84D"], [1, "#FF6B6B"]],
       showscale: true,
       colorbar: {
         title: "Distress %",
@@ -119,7 +119,7 @@ function drawScatterRentDistress() {
       y: 50,
       text: "r ≈ 0.9",
       showarrow: false,
-      font: { size: 14, color: "#5B7C99", weight: "bold" },
+      font: { size: 14, color: "#FF6B6B", weight: "bold" },
       bgcolor: "rgba(255,255,255,0.8)",
       borderpad: 4
     }]
@@ -147,7 +147,7 @@ function drawCityBubbleChart() {
     marker: {
       size: population.map(p => p * 15), // Scale bubble size
       color: distress,
-      colorscale: [[0, "#7BA05B"], [0.5, "#7BA05B"], [1, "#5B7C99"]],
+      colorscale: [[0, "#6BCF7F"], [0.5, "#FFB84D"], [1, "#FF6B6B"]],
       showscale: true,
       colorbar: {
         title: "Distress %",
@@ -185,21 +185,21 @@ function drawSleepBoxPlot() {
       y: [4.5, 5.0, 5.2, 5.5, 5.8, 6.0, 5.7, 5.3, 5.9, 6.1],
       name: "< $300/wk",
       type: "box",
-      marker: { color: "#5B7C99" },
+      marker: { color: "#FF6B6B" },
       boxmean: "sd"
     },
     {
       y: [6.0, 6.2, 6.5, 6.7, 6.8, 7.0, 6.9, 6.4, 6.6, 7.1],
       name: "$300-500/wk",
       type: "box",
-      marker: { color: "#7BA05B" },
+      marker: { color: "#FFB84D" },
       boxmean: "sd"
     },
     {
       y: [7.0, 7.2, 7.5, 7.8, 8.0, 8.2, 8.5, 7.6, 7.9, 8.1],
       name: "> $500/wk",
       type: "box",
-      marker: { color: "#7BA05B" },
+      marker: { color: "#6BCF7F" },
       boxmean: "sd"
     }
   ], {
@@ -215,7 +215,7 @@ function drawSleepBoxPlot() {
     plot_bgcolor: "rgba(255,255,255,0.3)",
     font: { family: "Inter, Manrope", color: "#1A1A1A", size: 12 },
     margin: { t: 30, b: 60, l: 60, r: 30 },
-    showlegend: true
+    showlegend: false
   }, { displayModeBar: false });
 }
     

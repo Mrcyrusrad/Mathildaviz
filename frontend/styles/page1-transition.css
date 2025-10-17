@@ -33,8 +33,15 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translate(0, 0); }
-  50% { transform: translate(-30px, 30px); }
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-30px, 30px);
+  }
 }
 
 /* ---- TEXT ---- */
@@ -43,7 +50,7 @@
   padding-right: 50px;
   font-size: 1.1rem;
   line-height: 1.8;
-  border-right: 1.5px solid rgba(0,0,0,0.07);
+  border-right: 1.5px solid rgba(0, 0, 0, 0.07);
 }
 
 .highlight {
@@ -196,8 +203,15 @@
 
 /* ---- ANIMATION ---- */
 @keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
 }
 
 /* --- SIDE INFORMATION PANELS --- */
@@ -205,10 +219,10 @@
   position: absolute;
   width: 270px;
   padding: 22px 24px;
-  background: rgba(255,255,255,0.65);
+  background: rgba(255, 255, 255, 0.65);
   border-radius: 18px;
   backdrop-filter: blur(12px);
-  box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.08);
   font-family: 'Inter', sans-serif;
   line-height: 1.65;
   color: #2E294E;
@@ -250,8 +264,15 @@
 
 /* Optional floating animation for ambience */
 @keyframes floatSide {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(6px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
 }
 
 .side-info.visible {
@@ -360,7 +381,6 @@
 .viz-quote {
   margin: 20px 0 0 0;
   padding: 16px 24px;
-  border-left: 4px solid var(--tuscan);
   background: linear-gradient(135deg, rgba(201, 168, 130, 0.08) 0%, rgba(255, 255, 255, 0.4) 100%);
   border-radius: 10px;
   font-size: 1rem;
@@ -382,22 +402,22 @@
 
 /* Responsive */
 @media (max-width: 1000px) {
+
   .viz-section,
   .viz-section.reverse {
     flex-direction: column;
     gap: 30px;
   }
-  
+
   .viz-chart,
   .viz-text {
     flex: 1 !important;
     width: 100%;
   }
-  
+
   .viz-section.large .viz-chart.large,
   .viz-section.medium .viz-chart.medium,
   .viz-section.small .viz-chart.small {
     min-height: 350px;
   }
 }
-
